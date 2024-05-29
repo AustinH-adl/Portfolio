@@ -1,4 +1,52 @@
-body {background-color: darkgrey;}
-h1 {font-family: Verdana; text-align: center;}
-h2 {font-family: Verdana; text-align: center;}
-p {font-family: Verdana; text-align: center;}
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0px; border: 0px;
+}
+
+body {
+    background-color: darkgrey; height: 100vh; width: 100%; top: 0; bottom: 0;
+}
+
+.borders {
+    border:0px;
+    margin:0px
+}
+
+.container {
+    display: flex; justify-content: center; width: 100%; height: 100%;
+}
+
+.homeButton { /* Add an Svg and animations when hovering over the home icon*/
+    background-color: pink; height: 100%; aspect-ratio: 1/1;
+}
+
+.navbar {
+    background-color: blue; height: 7%; width: 100%; display: flex; justify-content: center; align-items: center;
+}
+
+.navMiddle {
+    background-color: orange; height: 100%; width: 80%; display: flex; align-items: center; justify-content: space-between;
+}
+
+.navStyle {
+    background-color: green;
+}
+
+.heroPage {
+    background-color: red; display:flex; justify-content: center; align-items: center; width: 100%; height: 93%;
+}
+
+.hero {
+    background-color: orange; width: 66%; height:66%; border: 3px solid black;  display:flex; justify-content: center; align-items: center;
+}
+
+.heroLeft {
+    background-color: red; width: 66%; height: 100%; display: flex; flex-direction: column; justify-content: center; text-align: left;
+}
+
+.heroRight {
+    background-color: purple; width: 34%; height: 100%; /*Make the height dynamic with the screen height with JS*/
+}
