@@ -40,13 +40,19 @@ body {
 }
 
 .hero {
-    background-color: orange; width: 66%; height:66%; border: 3px solid black;  display:flex; justify-content: center; align-items: center;
+    background-color: orange; width: 66%; height:66%; border: 3px solid black;  display:flex; justify-content: center; align-items: center; border-radius: 30px; overflow: hidden;
 }
 
 .heroLeft {
     background-color: red; width: 66%; height: 100%; display: flex; flex-direction: column; justify-content: center; text-align: left;
 }
 
+.heroText {
+    text-align: right;
+}
+
 .heroRight {
-    background-color: purple; width: 34%; height: 100%; /*Make the height dynamic with the screen height with JS*/
+    background-color: purple; width: 34%; aspect-ratio: 1/1; border-radius: 50%;
+    /*Make the height dynamic with the screen height with JS
+    This was done with CSS aspect ratio*/
 }
