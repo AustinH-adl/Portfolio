@@ -3,47 +3,57 @@
     <head>
         <title> Austin Huppatz </title>
 
-        <link rel="icon" type="image/x-icon" href="Resources/Code-Icon.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
         <link rel="stylesheet" href="Styling.css">
+        <script src="scripts.js"></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"
-        charset="UTF-8">
+        <link rel="icon" type="image/x-icon" href="Resources/Code-Icon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
     <body class="borders">
-        <div class="navbar borders">
+        <header class="navbar borders">
             <div class="navMiddle borders">
-                <div class="homeButton borders">
-                    <p>button</p>
+                <div class="logoHolder borders">
+                    <a href="#" class="logo">
+                        AH
+                    </a>
+                    <h1 class="name logoText">Austin Huppatz</h1>
                 </div>
-                <nav class="navStyle borders">
-                    <a>About me</a>
+                <nav class="borders">
+                    <a href="index.html"></a>
                     <span>|</span>
-                    <a>Projects</a>
+                    <a href="about.html">About me</a>
                     <span>|</span>
-                    <a>Contacts</a>
+                    <a href="projects.html">Projects</a>
+                    <span>|</span>
+                    <a href="contacts.html">Contacts</a>
                 </nav>
             </div>
-        </div>
+        </header>
 
-        <div class="heroPage borders">
+        <section class="heroPage borders">
             <div class="hero">
                 <div class="heroLeft borders">
-                    <div class="heroText borders">
-                        <h1> Hi, I'm Austin Huppatz, </h1>
-                        <h2>
+                    <article class="heroText borders">
+                        <h1 class="name"> Hi, I'm Austin Huppatz, </h1>
+                        <h2 id="description">
                             A student studying a Bachelor of Computer Science at the University of Adelaide. 
-                            I am interested in software development stemming from my interest in video games. 
                         </h2> <!--Change the intro-->
-                    </div>
+                    </article>
                 </div>
 
                 <div class="heroRight borders">
-                    <p>photo</p>
+                    <img src="Resources/HeroPic.jpg" alt="Sexy Pic" class="heroPic">
                 </div> <!--Find a good picture for the hero page-->
-                
             </div>
-        </div>
+        </section>
     </body>
 </html>
