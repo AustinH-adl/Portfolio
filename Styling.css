@@ -8,13 +8,11 @@
     --blue-200: #66FCF1;
     --blue-400: #45A29E;
 }
-    
 
 * {
     box-sizing: border-box;
     margin: "0";
     border: "0";
-    color: var(--base-800)
 }
 
 p {
@@ -30,16 +28,8 @@ body {
     background-color: var(--base-700); height: 100vh; width: 100%; top: 0; bottom: 0;
 }
 
-a {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
 header {
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .borders {
@@ -56,17 +46,32 @@ header {
     display: flex; justify-content: center; align-items: center;
 }
 
-.logo {
+/*.logo {
     height: 100%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: #66FCF1;
     display: flex; justify-content: center; align-items: center;
-}
+    color: var(--base-800);
+    text-decoration: none;
+    font-weight: 500;
+}*/
 
 .logoText { 
-    padding-left: 5px;
+    color: var(--base-800);
+    font-weight: 600;
+    text-decoration: none;
     flex:1;
+    font-size: large;
+}
+
+.navButton {
+    color: var(--base-800);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .navbar {
@@ -79,10 +84,10 @@ header {
 
 .heroPage {
     display:flex; justify-content: center; align-items: center; width: 100%; height: 93%;
-}
+} /*Make an interesting background later on with an API like next, angular or react*/
 
 .hero {
-    background-color: var(--base-500); width: 66%; height:66%; border: 3px solid black;  display:flex; justify-content: center; align-items: center; border-radius: 30px; overflow: hidden;
+    width: 66%; height:66%;  display:flex; justify-content: center; align-items: center; border-radius: 30px; overflow: hidden;
 }
 
 .heroLeft {
@@ -107,9 +112,130 @@ header {
 }
 
 .name { 
-    font-size: large;
+    font-size: xx-large;
+    color: var(--base-200)
 }
 
 #description {
-    font-size: medium;
+    font-size: x-large;
+    color: var(--base-200)
+}
+
+/*section{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}*/
+
+
+.star{
+    position: absolute;
+    z-index: -1;
+    top:50%;
+    left:50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+    animation: animate 3s linear infinite;
+}
+.star::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg,#fff,transparent);
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+.star:nth-child(1){
+    top: -10px;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 1s;
+}
+.star:nth-child(2){
+    top: -10px;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+.star:nth-child(3){
+    top: 80;
+    right: -10px;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+.star:nth-child(4){
+    top: -10px;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+.star:nth-child(5){
+    top: -10px;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+.star:nth-child(6){
+    top: -10px;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+.star:nth-child(7){
+    top: 300px;
+    right: -10px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 1.75s;
+}
+.star:nth-child(8){
+    top: -10px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+.star:nth-child(9){
+    top: -10px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+}
+.star:nth-child(9){
+    top: -10px;
+    right: 450px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.75s;
 }
