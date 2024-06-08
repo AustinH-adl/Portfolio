@@ -16,22 +16,51 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
-    <body class="borders" style="overflow: hidden;">
+    <body class="borders" style="overflow: hidden;" onload="colorNav()">
         <header class="navbar borders">
-            <div class="navMiddle borders">
+            <nav class="navMiddle borders">
                 <div class="logoHolder borders">
                     <a href="index.html" class="logoText ">AustinHuppatz</a>
                 </div>
-                <nav class="borders">
-                    <a class="navButton" href="index.html">Home</a>
-                    <span class="navButton">|</span>
-                    <a class="navButton" href="about.html">About me</a>
-                    <span class="navButton">|</span>
-                    <a class="navButton" href="projects.html">Projects</a>
-                    <span class="navButton">|</span>
-                    <a class="navButton" href="contacts.html">Contacts</a>
-                </nav> 
-            </div>
+                <ul class="borders nav-list">
+                    <li class="nav-item">
+                        <a class="navButton" href="index.html"> 
+                            <span> Home </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon">
+                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navButton" href="about.html">
+                            <span> About Me </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon">
+                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navButton" href="projects.html">
+                            <span> Projects </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon">
+                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path d="M88.7 223.8L0 375.8V96C0 60.7 28.7 32 64 32H181.5c17 0 33.3 6.7 45.3 18.7l26.5 26.5c12 12 28.3 18.7 45.3 18.7H416c35.3 0 64 28.7 64 64v32H144c-22.8 0-43.8 12.1-55.3 31.8zm27.6 16.1C122.1 230 132.6 224 144 224H544c11.5 0 22 6.1 27.7 16.1s5.7 22.2-.1 32.1l-112 192C453.9 474 443.4 480 432 480H32c-11.5 0-22-6.1-27.7-16.1s-5.7-22.2 .1-32.1l112-192z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navButton" href="contacts.html">
+                            <span> Contacts </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon">
+                                <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul> 
+            </nav>
         </header>
 
         <section class="heroPage borders">
@@ -45,10 +74,12 @@
             <span class="star"></span>
             <span class="star"></span>
             <span class="star"></span>
+            
+            
             <div class="hero borders">
                 <div class="heroLeft borders">
                     <article class="heroText borders">
-                        <h1 class="name"> Hi, I'm Austin Huppatz, </h1>
+                        <h1 class="intro"> Hi, I'm <span class="name">Austin Huppatz </span></h1>
                         <h2 id="description">
                             A student studying a Bachelor of Computer Science at the University of Adelaide. 
                         </h2> <!--Change the intro-->
@@ -58,6 +89,8 @@
                 <div class="heroRight borders">
                     <img src="Resources/HeroPic.jpg" alt="Sexy Pic" class="heroPic">
                 </div> <!--Find a good picture for the hero page-->
+
+
             </div>
         </section>
     </body>
