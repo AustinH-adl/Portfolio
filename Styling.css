@@ -11,6 +11,26 @@
     --synth-200: #650D89;
     --synth-300: #920075;
     --synth-400: #F6019D;
+
+
+    --light-text: #C5C6C7;
+    --dark-text: #0B0C10;
+}
+
+[data-theme="light"] {
+    --base-800: #FFFFFF;
+    --base-700: #F5F5F5;
+    --base-600: #E0E0E0;
+    --base-500: #495058;
+    --base-400: #151A22;
+    --base-200: #0B0C10;
+    --synth-100: #023788;
+    --synth-200: #650D89;
+    --synth-300: #920075;
+    --synth-400: #F6019D;
+
+    --light-text:#0B0C10;
+    --dark-text: #FFF;
 }
 
 * {
@@ -45,17 +65,13 @@ header {
     display: flex; justify-content: center; width: 100%; height: 100%;
 }
 
-.container {
-    display: flex; justify-content: center; width: 100%; height: 100%;
-}
-
 .logoHolder { /* Add an Svg and animations when hovering over the home icon*/
     height: 100%;
     display: flex; justify-content: center; align-items: center;
 }
 
 .logoText { 
-    color: var(--base-800);
+    color: var(--dark-text);
     font-weight: 600;
     text-decoration: none;
     flex:1;
@@ -63,28 +79,41 @@ header {
 }
 
 .navButton {
-    color: var(--base-800);
+    color: var(--dark-text);
     text-decoration: none;
     display: flex;
     align-items: center;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 5px;
     height: 100%;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
     &:hover {
         background-color: var(--base-700);
-        color: var(--base-200);
-        fill: var(--base-200)
-    }
-    &:focus {
-        background-color: aqua;
+        color: var(--light-text);
+        fill: var(--light-text)
     }
 }
+
+.darkbutton {
+    border: none;
+    background-color: var(--base-500);
+    padding: auto;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .active {
-    background-color: aqua;
+    background-image: linear-gradient(to bottom right, var(--synth-100), var(--synth-200), var(--synth-300));
+    background-size: 200% 200%;
+    animation: rotate 15s ease infinite; 
 }
 
 .navbar {
     background-color: var(--base-500); height: 7%; width: 100%; display: flex; justify-content: center; align-items: center;
+    top: 0; position: fixed;
 }
 
 .navMiddle {
@@ -111,7 +140,7 @@ header {
 
 .heroPage {
     display:flex; justify-content: center; align-items: center; width: 100%; height: 93%;
-} /*Make an interesting background later on with an API like next, angular or react*/
+}
 
 .hero {
     width: 66%; height:66%;  display:flex; justify-content: center; align-items: center; border-radius: 30px; overflow: hidden;
@@ -140,37 +169,34 @@ header {
 
 .intro { 
     font-size: xx-large;
-    color: var(--base-200)
+    color: var(--light-text)
 }
 
 .name {
     font-size: xx-large;
-    background-image: linear-gradient(to bottom right, var(--synth-100), var(--synth-200), var(--synth-300));
+    background-image: linear-gradient(-45deg, var(--synth-100), var(--synth-200), var(--synth-300));
     color: transparent;
     background-clip: text;
-    animation: rotate 10s ease infinite;
+    background-size: 200% 200%;
+    animation: rotate 15s ease infinite;
 }
 
 @keyframes rotate {
-    0%{background-position:91% 0%}
-    50%{background-position:10% 100%}
-    100%{background-position:91% 0%}
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #description {
     font-size: x-large;
-    color: var(--base-200)
+    color: var(--light-text)
 }
-
-/*section{
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-}*/
-
 
 .star{
     position: absolute;
@@ -184,6 +210,7 @@ header {
     box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
     animation: stars 3s linear infinite;
 }
+
 .star::before{
     content:'';
     position: absolute;
